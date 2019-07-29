@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <!-- Load color scale -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="Scatter.js"></script>
+    <link href="Scatter.css" rel="stylesheet" />
+  </head>
+   
+<body onload='init()' style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+<!-- Create a div where the graph will take place -->
+
+<table style="margin-left: 50; margin-top: 10; margin-right: 50 ">
+  <tr>
+    <td colspan="2"><span style="padding:10px; font-weight: bold; font-size: 16pt; margin-bottom: 20;">Relation between Engine Cylinders and Average MPG</span></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div id="divScenes" style="padding-left:10px;">
+      <lable>Page Index: </lable>
+      <button id="btnScene1" class="clsBtnScenes" value="0"> 1 </button>
+      <button id="btnScene2" class="clsBtnScenes" value="6"> 2 </button>
+      <button id="btnScene3" class="clsBtnScenes" value="12"> 3 </button>
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+        <div style="background-color:cornsilk">
+            <table width="100%" >
+              <tr>
+                <td width="60%">
+                    <div id="range-label" style="padding: 5">Selected Cylinder Range : 0 - 0</div>
+                   
+                </td>
+                <td width="40%">
+                  <div style="padding-left: 20px;">Engine Types:</div>
+                  
+                </td>
+              </tr>
+              <tr >
+                <td>
+                    <table width="100%">
+                      <tr>
+                        <td width="50">
+                            <div><button id="playButton">Play</button></div>
+                        </td>
+                        <td>
+                            <div id="slider-container" ></div> 
+                        </td>
+                      </tr>
+                     
+                    </table>
+                    
+                </td>
+                <td>
+                    <div style="text-align: left; padding-left: 20px">
+                        <input type="checkbox" class="checkbox" value="Electricity" checked><label>Electic</label>
+                        <input type="checkbox" class="checkbox" value="Diesel" checked><label>Diesel</label>
+                        <input type="checkbox" class="checkbox" value="Gasoline" checked><label>Gasoline</label>
+                      </div>
+                </td>
+              </tr>
+            </table>    
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <div id="my_dataviz"></div>
+    </td>
+    <td width="250px;" style="vertical-align: top; background-color: ivory; padding:10;">
+        <div>
+          The graph analyses the relation between the number of engine cylinders and its associated average MPG. <br/><br/>
+        </div>
+        <div id="divMessage">
+          
+        </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
